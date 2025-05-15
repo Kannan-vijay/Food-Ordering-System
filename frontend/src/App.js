@@ -1,14 +1,18 @@
 
 import './App.css';
 import Home from './pages/Home';
-
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 function App() {
-  return (<>
-            <Home />
-            <div class="container bootstrap-dark">
-              <button class="btn btn-primary">Dark Mode Button</button>
-            </div>  
-          </>
+  return (
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
